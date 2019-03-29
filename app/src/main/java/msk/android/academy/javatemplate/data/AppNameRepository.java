@@ -1,10 +1,8 @@
 package msk.android.academy.javatemplate.data;
 
 import android.arch.lifecycle.LiveData;
-import android.arch.lifecycle.Observer;
 import android.database.Cursor;
 import android.net.Uri;
-import android.support.annotation.Nullable;
 
 import com.google.firebase.auth.FirebaseUser;
 

@@ -4,7 +4,7 @@
     <item android:drawable="@android:color/white"/>
 
     <item>
-        <bitmap android:src="@drawable/googleg_standard_color_18" android:gravity="center" />
+        <bitmap android:src="@drawable/ic_big_logo" android:gravity="center" />
 
     </item>
 
