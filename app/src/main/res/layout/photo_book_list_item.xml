@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="100dp"
+    android:layout_height="178dp"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@color/cardview_dark_background">
 
@@ -18,6 +18,23 @@
             android:scaleType="centerCrop"
             android:adjustViewBounds="true"
             android:src="@drawable/ic_launcher_background"/>
+
+        <ImageView
+            android:id="@+id/iv_photo_book_status"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_gravity="top|start"
+            android:paddingTop="5dp"
+            android:paddingStart="5dp"/>
+
+        <ImageView
+            android:id="@+id/info"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_gravity="top|end"
+            android:paddingTop="5dp"
+            android:paddingEnd="5dp"
+            android:background="@drawable/ic_info"/>
 
     </android.support.v7.widget.CardView>
 

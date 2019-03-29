@@ -78,12 +78,42 @@ public class PhotoBookAdapter extends RecyclerView.Adapter<PhotoBookAdapter.Phot
 
         private ImageView ivImage;
 
+        private ImageView ivStatus;
+        private Status status = Status.PLUS;
+
         PhotoBookViewHolder(View itemView) {
             super(itemView);
 
             ivImage = itemView.findViewById(R.id.iv_image);
+            ivStatus = itemView.findViewById(R.id.iv_photo_book_status);
+            ivStatus.setBackgroundResource(getImageResource(status));
+            ivStatus.setOnClickListener(v -> {
+                switch (status) {
+                    case PLUS:
+                        status = Status.CHECK;
+                        break;
+                    case CHECK:
+                        status = Status.PLUS;
+                        break;
+                }
+                ivStatus.setBackgroundResource(getImageResource(status));
+            });
         }
 
+        private int getImageResource(Status status) {
+            switch (status) {
+                case PLUS:
+                    return R.drawable.ic_plus;
+                case CHECK:
+                    return R.drawable.ic_check;
+            }
+            return -1;
+        }
+
+        private enum Status {
+            PLUS,
+            CHECK
+        }
     }
 
     class MyGestureListener extends GestureDetector.SimpleOnGestureListener {

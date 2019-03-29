@@ -58,7 +58,7 @@ public class PhotoBookFragment extends Fragment implements PhotoBookContract.Vie
         mRecyclerView = v.findViewById(R.id.rv_images);
 
         // Use a linear layout manager
-        GridLayoutManager mLayoutManager = new GridLayoutManager(getContext(), 3);
+        GridLayoutManager mLayoutManager = new GridLayoutManager(getContext(), 2);
         mRecyclerView.setLayoutManager(mLayoutManager);
 
         mPresenter = new PhotoBookPresenter(this, getContext().getApplicationContext());
