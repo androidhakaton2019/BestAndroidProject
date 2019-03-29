@@ -21,7 +21,6 @@ public class AppNameNetworkDataSource {
     private final MutableLiveData<String> mUserName;
     private final MutableLiveData<String> mUserEmail;
 
-
     private final AppExecutors mExecutors;
 
     private AppNameNetworkDataSource(Context context, AppExecutors executors) {

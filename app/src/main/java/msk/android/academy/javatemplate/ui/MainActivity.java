@@ -20,6 +20,7 @@ import android.widget.TextView;
 import com.bumptech.glide.Glide;
 
 import msk.android.academy.javatemplate.R;
+import msk.android.academy.javatemplate.ui.photoBook.PhotoBookFragment;
 import msk.android.academy.javatemplate.ui.user.LoginFragment;
 import msk.android.academy.javatemplate.ui.user.LogoutFragment;
 import msk.android.academy.javatemplate.ui.user.UserInfoViewModel;
@@ -64,7 +65,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         setupNavigationDrawer();
 
-//        inflateEventsFragment();
+        inflatePhotoBookFragment();
     }
 
     private void setupToolbar() {
@@ -145,7 +146,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 menuItem.setCheckable(false);
                 performLogout();
                 performLogin();
-//                inflateEventsFragment();
+                inflatePhotoBookFragment();
                 return true;
         }
 
@@ -167,16 +168,16 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         tvNavHeaderUserEmail.setText(userEmail);
     }
 
-//    private void inflateFragment() {
-//        // Create the fragment
-//        Fragment fragment = Fragment.getNewInstance();
-//
-//        FragmentManager fragmentManager = getSupportFragmentManager();
-//        if (! fragmentManager.isStateSaved()) {
-//            FragmentTransaction transaction = fragmentManager.beginTransaction();
-//            transaction.replace(R.id.fragment, fragment, FRAGMENT_TAG);
-//            transaction.commit();
-//        }
-//    }
+    private void inflatePhotoBookFragment() {
+        // Create the fragment
+        PhotoBookFragment photoBookFragment = PhotoBookFragment.getNewInstance();
+
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        if (! fragmentManager.isStateSaved()) {
+            FragmentTransaction transaction = fragmentManager.beginTransaction();
+            transaction.replace(R.id.fragment, photoBookFragment, FRAGMENT_TAG);
+            transaction.commit();
+        }
+    }
 }
 
