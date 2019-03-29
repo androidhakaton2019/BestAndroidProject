@@ -1,3 +1,4 @@
 <resources>
-    <string name="app_name">JavaTemplate</string>
+    <string name="app_name">App Name</string>
+    <string name="action_logout">Logout</string>
 </resources>
